@@ -38,16 +38,18 @@ export const GlobalStyle = createGlobalStyle`
     color: #333
   }
 
+  .flex {
+    display: flex;
+  }
+
 `;
 
 export const ContainerWrapper = styled.section`
-  .container {
-    margin: 0 auto;
-    display: flex;
-    justify-content: start;
-  }
 
-  .container > div {
+  display: flex;
+  justify-content: start;
+
+  .content_wrapper {
     flex-grow: 1;
   }
 `;

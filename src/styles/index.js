@@ -100,8 +100,10 @@ export const SidebarStyles = styled.section`
   .invoice {
     background: #27AE60;
     border-radius: 30px;
-    padding: 10px 25px;
+    padding: 8px 22px;
     color: white;
+    font-size: 12px;
+    font-weight: 200;
     border: 0;
     cursor: pointer;
   }
@@ -158,4 +160,34 @@ export const SidebarStyles = styled.section`
     margin-top: 20px
   }
 
+`;
+
+export const CenterContentWrapper = styled.section`
+  display: flex;
+  padding: 90px 50px 0 32px;
+  flex-direction: column;
+
+  ul.flex {
+    justify-content: space-between
+  }
+
+  ul.flex li {
+    background: white;
+    padding: 10px 15px 10px 15px;
+    border-radius: 2px;
+  }
+
+  ul.flex li span {
+    padding: 0 8px 0 0
+  }
+
+  ul.flex li small {
+    color: #787C90;
+    font-size: 15px;
+  }
+
+  ul.flex li h4 {
+    padding: 0;
+    margin: 5px 0 0;
+  }
 `;
