@@ -5,7 +5,7 @@ import { Header } from './components/layout/Header';
 import { Container } from './components/MainContent';
 
 export const App = () => {
-  const iconStyles = {
+  const defaultIconStyles = {
     style: {
       fontSize: '20px',
       verticalAlign: 'middle',
@@ -17,7 +17,7 @@ export const App = () => {
   return (
     <div>
       <GlobalStyle />
-      <IconContext.Provider value={iconStyles}>
+      <IconContext.Provider value={defaultIconStyles}>
         <Header />
         <Container />
       </IconContext.Provider>

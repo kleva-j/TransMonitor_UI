@@ -21,9 +21,12 @@ export const GlobalStyle = createGlobalStyle`
     font-size: 16px;
   }
 
-  ul {
+  ul, p {
     margin: 0;
     padding: 0;
+  }
+
+  ul {
     list-style-type: none;
   }
 

@@ -7,8 +7,9 @@ export const Input = styled.input`
   font-family: Segoe UI;
   font-style: normal;
   font-weight: normal;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 16px;
+  padding: 0 5px
 `;
 
 export const HeaderStyle = styled.header`
@@ -20,7 +21,7 @@ export const HeaderStyle = styled.header`
   flex-wrap: wrap;
   align-content: center;
   top: 0;
-  height: 60px
+  height: 70px
 
   .logo {
     width: 300px;
@@ -35,7 +36,6 @@ export const HeaderStyle = styled.header`
     flex-grow: 1;
     display: inherit;
     justify-content: space-between;
-    // border: 1px solid orange;
     padding: 0 30px;
   }
 
@@ -92,4 +92,70 @@ export const SidebarStyles = styled.section`
   padding-top: 100px;
   background: #ffffff;
   height: 100vh;
+
+  aside {
+   margin-left: 35px;
+  }
+
+  .invoice {
+    background: #27AE60;
+    border-radius: 30px;
+    padding: 10px 25px;
+    color: white;
+    border: 0;
+    cursor: pointer;
+  }
+
+  section.sidebar_content {
+    margin: 10px 0;
+  }
+
+  .sidebar_content div {
+    margin: 20px 0
+  }
+
+  .section_header {
+    padding: 0px 35px;
+    font-size: 13px;
+    color: #647787
+  }
+
+  li {
+    font-family: Segoe UI;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 18px;
+    color: #647787;
+    border-left: 7px solid transparent;
+    padding: 10px 0 10px 32px;
+    cursor: pointer;
+    vertical-align: middle;
+    height: 100%
+  }
+
+  li:hover {
+    background: rgba(24, 117, 240, .1);
+  }
+
+  li.active {
+    background: rgba(24, 117, 240, .1);
+    border-left-color: #1875F0;
+  }
+
+  li p {
+    display: inline-block;
+    font-size: 13px;
+    padding-left: 15px;
+    vertical-align: middle
+  }
+  
+  li img {
+    vertical-align: middle;
+  }
+
+  li.profile {
+    margin-top: 20px
+  }
+
 `;
