@@ -12,7 +12,6 @@ export const TopSection = () => (
         </span>
         <img src={Chart} width="100px" alt="" />
       </li>
-
     ))}
   </ul>
 );

@@ -164,11 +164,12 @@ export const SidebarStyles = styled.section`
 
 export const CenterContentWrapper = styled.section`
   display: flex;
-  padding: 90px 50px 0 32px;
+  padding: 70px 50px 0 32px;
   flex-direction: column;
+  box-sizing: border-box
 
   ul.flex {
-    justify-content: space-between
+    justify-content: space-between;
   }
 
   ul.flex li {
@@ -178,7 +179,7 @@ export const CenterContentWrapper = styled.section`
   }
 
   ul.flex li span {
-    padding: 0 8px 0 0
+    padding: 0 8px 0 0;
   }
 
   ul.flex li small {
@@ -189,5 +190,141 @@ export const CenterContentWrapper = styled.section`
   ul.flex li h4 {
     padding: 0;
     margin: 5px 0 0;
+    color: #262626
+  }
+
+  ul.flex, article {
+    margin: 20px 0;
+  }
+
+  article {
+    height: 350px;
+    justify-content: space-between
+  }
+
+  button {
+    color: #CCCFD4;
+  }
+
+  button.left, button.right {
+    padding: 6px 9px;
+    border-radius: 4px;
+    border: 1px solid #DDE0E3;
+    background: white;
+    margin: 0 8px;
+    box-shadow: 0 1px 0 1px rgba(0,0,0,.04);
+    cursor: pointer;
+  }
+
+  .top.flex {
+    position: absolute;
+    width: 100%;
+    top: 30px;
+    justify-content: flex-start;
+  }
+
+  .top.flex > h3 {
+    flex-grow: 1;
+    margin-left: 50px
+  }
+
+  .top.flex > span {
+    width: 300px;
+    vertical-align: middle
+  }
+
+  .select {
+    font-size: 16px;
+    font-family: sans-serif;
+    color: #7F8FA4;
+    line-height: 1.3;
+    padding: .6em 1.4em .5em .8em;
+    box-sizing: border-box;
+    margin: 0;
+    border: 1px solid #DDE0E3;
+    box-shadow: 0 1px 0 1px rgba(0,0,0,.04);
+    border-radius: .5em;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: #fff;
+    margin-right: 20px;
+    cursor: pointer;
+  }
+
+  .select:focus {
+    outline: none;
+  }
+
+  .select option {
+    font-weight: normal;
+  }
+  
+  main {
+    flex-grow: 1;
+    border-radius: 3px;
+    background: white;
+    overflow: hidden;
+    position: relative
+  }
+  
+  .graph {
+    position: relative;
+  }
+  
+  .gradient, .date {
+    position: absolute;
+    left: 0;
+    width: 100%
+  }
+
+  .gradient {
+    top: 130px;
+  }
+  
+  .date {
+    top: 100px;
+  }
+  
+  .months {
+    padding: 0 60px 270px;
+    height: 250px;
+    border-right: 2px solid #CFE8FB;
+  }
+`;
+
+export const SideSectionWrapper = styled.aside`
+  width: 400px;
+  border-radius: 3px;
+  margin-left: 10px;
+  box-sizing: border-box;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .top, .bottom {
+    height: 170px;
+    padding: 20px;
+    background: white;
+  }
+
+  .aside > div > h4 {
+    color: #2626262;
+  }
+
+  hr {
+    padding: 2px;
+    border: none;
+    border-radius: 3px;
+    background: #27AE60;
+    background: linear-gradient(90deg, #27AE60 80%, rgba(253, 194, 3, 0.463542) 20%, rgba(253, 194, 3, 1) 100%, rgba(253, 194, 3, 1) 100%);
+  }
+
+  hr ~ p {
+    font-family: Segoe UI;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 19px;
+    margin: 12px 0;
+    color: #262626;
   }
 `;
