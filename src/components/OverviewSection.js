@@ -4,18 +4,24 @@ import graph from '../images/gradient.svg';
 
 const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
+const getCurrentDate = () => {
+  const [month, date, year] = (new Date().toDateString()).split(' ').slice(1);
+  return `${date}, ${month} ${year}`;
+}
+
 export const OverviewSection = () => (
   <article className="flex">
     <main>
       <div className="top flex">
-        <h3>Today: 5, Aug 2018</h3>
+        {/* <h3>Today: 5, Aug 2018</h3> */}
+        <h3>Today: {getCurrentDate()}</h3>
         <span>
           <select className="select">
             <option value="1 Jan - 1 Jun">1 Jan - 1 Jun</option>
             <option value="1 Aug - 1 Dec">1 Aug - 1 Dec</option>
           </select>
-          <button class="left">&lt;</button>
-          <button class="right">&gt;</button>
+          <button className="left">&lt;</button>
+          <button className="right">&gt;</button>
         </span>
       </div>
       <div className="graph">
