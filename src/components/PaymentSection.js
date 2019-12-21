@@ -4,14 +4,14 @@ import { Input } from '../styles';
 import { PaymentSectionWrapper, ListItem, Pager, SortSectionWrapper } from '../styles/styles';
 import { dummyList } from '../dummydata';
 
-const SortSection = ({ handleChange, noOfPayments }) => {
+const SortSection = ({ handleChange, setLimit }) => {
 
   return (
     <SortSectionWrapper className="flex">
       <div className="left_panel">
         <small>Showing</small> 
-        <select className="select_number">
-          <option value="5">{noOfPayments > 5 ? 5 : noOfPayments}</option>
+        <select onChange={setLimit} className="select_number">
+          <option value="5">5</option>
           <option value="10">10</option>
           <option value="20">20</option>
           <option value="50">50</option>
@@ -69,38 +69,64 @@ const TableHeader = () => (
 
 export const PaymentSection = () => {
   const [state, setState] = useState(dummyList);
-  const [pagination] = useState({
+
+  const setPage = (listLength, limit) => {
+    const mod = listLength % limit;
+    const divide = Math.round(listLength / limit);
+    return (mod === 0  || limit > listLength) ? divide : divide+1;
+  }
+
+  const [pagination, setPagination] = useState({
     currentPage: 1,
-    limit: 10,
+    limit: 5,
     offset: 0,
-    pages: Math.round(dummyList.length / 10 | 1),
+    pages: setPage(dummyList.length, 5),
   });
+
 
   const handleChange = (event) => {
     const { value } = event.target;
     if (value === 'All') {
-      return setState(dummyList);
+      setState(dummyList);
+      return setPagination({ ...pagination, offset: 0, currentPage: 1, pages: setPage(dummyList.length, limit), });
+    } else {
+      const filteredResult = dummyList.filter(item => value === item.status);
+      setState(filteredResult);
+      return setPagination({
+        ...pagination,
+        offset: 0,
+        pages: setPage(filteredResult.length, limit),
+        currentPage: 1
+      });
     }
-    const filteredResult = dummyList.filter(item => value === item.status);
-    return setState(filteredResult);
   }
 
+  const setLimit = event => {
+    const { value } = event.target;
+    return setPagination({ ...pagination, limit: value, pages: setPage(state.length, value ) })
+  }
+
+  const setOffset = (e, newOffset) => {
+    const index = typeof e === "number" ? e : e.target.textContent;
+    const offset = newOffset || ((index - 1) * pagination.limit);
+    return setPagination({ ...pagination, offset, currentPage: index })
+  }
 
   const { currentPage, limit, offset, pages } = pagination;
 
   return (
     <PaymentSectionWrapper>
       <h1>Payments</h1>
-      <SortSection handleChange={handleChange} noOfPayments={state.slice(offset, limit + offset).length} />
+      <SortSection handleChange={handleChange} limit={limit} setLimit={setLimit} />
       <TableHeader />
-      {state.slice(offset, limit + offset).map(({ id, initials, item, price, transactionNo, time, status}) => (<SingleListItem key={id} id={id} item={item} initials={initials} price={price} transactionNo={transactionNo} time={time} status={status} />))}
+      {state.slice(offset, (offset + limit)).map(({ id, initials, item, price, transactionNo, time, status}) => (<SingleListItem key={id} id={id} item={item} initials={initials} price={price} transactionNo={transactionNo} time={time} status={status} />))}
 
       <section className="flex">
         <p>Showing {offset | 1} to {state.length} of {dummyList.length} entries</p>
         <ul className="flex">
           <li className="pager">Previous</li>
           {
-            Array.from({length: pages}, (_v, k) => k+1).map(item => <Pager isActive={item === currentPage} key={item} className="pager">{item}</Pager>)
+            Array.from({length: pages}, (_v, k) => k+1).map(item => <Pager isActive={item === currentPage} key={item} onClick={setOffset} className="pager">{item}</Pager>)
           }
           <li className="pager">Next</li>
         </ul>
