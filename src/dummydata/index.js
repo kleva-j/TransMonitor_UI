@@ -49,76 +49,76 @@ export const dummyList = [
     time: '12:30',
     status: 'Reconcilled'
   },
-  // {
-  //   id: 4,
-  //   initials: 'vw',
-  //   item: 'Apple Mac Book 15” 250 SSD 12GB',
-  //   price: '$73430',
-  //   transactionNo: 1234567890,
-  //   time: '12:30',
-  //   status: 'Reconcilled'
-  // },
-  // {
-  //   id: 5,
-  //   initials: 'vw',
-  //   item: 'Apple Mac Book 15” 250 SSD 12GB',
-  //   price: '$73430',
-  //   transactionNo: 1234567890,
-  //   time: '12:30',
-  //   status: 'Pending'
-  // },
-  // {
-  //   id: 6,
-  //   initials: 'vw',
-  //   item: 'Apple Mac Book 15” 250 SSD 12GB',
-  //   price: '$73430',
-  //   transactionNo: 1234567890,
-  //   time: '12:30',
-  //   status: 'Un-Reconcilled'
-  // },
-  // {
-  //   id: 7,
-  //   initials: 'vw',
-  //   item: 'Apple Mac Book 15” 250 SSD 12GB',
-  //   price: '$73430',
-  //   transactionNo: 1234567890,
-  //   time: '12:30',
-  //   status: 'Reconcilled'
-  // },
-  // {
-  //   id: 8,
-  //   initials: 'vw',
-  //   item: 'Apple Mac Book 15” 250 SSD 12GB',
-  //   price: '$73430',
-  //   transactionNo: 1234567890,
-  //   time: '12:30',
-  //   status: 'Un-Reconcilled'
-  // },
-  // {
-  //   id: 9,
-  //   initials: 'vw',
-  //   item: 'Apple Mac Book 15” 250 SSD 12GB',
-  //   price: '$73430',
-  //   transactionNo: 1234567890,
-  //   time: '12:30',
-  //   status: 'Pending'
-  // },
-  // {
-  //   id: 10,
-  //   initials: 'vw',
-  //   item: 'Apple Mac Book 15” 250 SSD 12GB',
-  //   price: '$73430',
-  //   transactionNo: 1234567890,
-  //   time: '12:30',
-  //   status: 'Un-Reconcilled'
-  // },
-  // {
-  //   id: 11,
-  //   initials: 'vw',
-  //   item: 'Apple Mac Book 15” 250 SSD 12GB',
-  //   price: '$73430',
-  //   transactionNo: 1234567890,
-  //   time: '12:30',
-  //   status: 'Pending'
-  // },
-]
+  {
+    id: 4,
+    initials: 'vw',
+    item: 'Apple Mac Book 15” 250 SSD 12GB',
+    price: '$73430',
+    transactionNo: 1234567890,
+    time: '12:30',
+    status: 'Reconcilled'
+  },
+  {
+    id: 5,
+    initials: 'vw',
+    item: 'Apple Mac Book 15” 250 SSD 12GB',
+    price: '$73430',
+    transactionNo: 1234567890,
+    time: '12:30',
+    status: 'Pending'
+  },
+  {
+    id: 6,
+    initials: 'vw',
+    item: 'Apple Mac Book 15” 250 SSD 12GB',
+    price: '$73430',
+    transactionNo: 1234567890,
+    time: '12:30',
+    status: 'Un-Reconcilled'
+  },
+  {
+    id: 7,
+    initials: 'vw',
+    item: 'Apple Mac Book 15” 250 SSD 12GB',
+    price: '$73430',
+    transactionNo: 1234567890,
+    time: '12:30',
+    status: 'Reconcilled'
+  },
+  {
+    id: 8,
+    initials: 'vw',
+    item: 'Apple Mac Book 15” 250 SSD 12GB',
+    price: '$73430',
+    transactionNo: 1234567890,
+    time: '12:30',
+    status: 'Un-Reconcilled'
+  },
+  {
+    id: 9,
+    initials: 'vw',
+    item: 'Apple Mac Book 15” 250 SSD 12GB',
+    price: '$73430',
+    transactionNo: 1234567890,
+    time: '12:30',
+    status: 'Pending'
+  },
+  {
+    id: 10,
+    initials: 'vw',
+    item: 'Apple Mac Book 15” 250 SSD 12GB',
+    price: '$73430',
+    transactionNo: 1234567890,
+    time: '12:30',
+    status: 'Un-Reconcilled'
+  },
+  {
+    id: 11,
+    initials: 'vw',
+    item: 'Apple Mac Book 15” 250 SSD 12GB',
+    price: '$73430',
+    transactionNo: 1234567890,
+    time: '12:30',
+    status: 'Pending'
+  },
+];
