@@ -23,10 +23,12 @@ export const PaymentSectionWrapper = styled.section`
   .table_header > .col {
     color: #7F8FA4;
   }
-  
-  .table__header > .col{
-    width: 15%
+
+  .table_header > .col1 {
+    margin-left: -70px;
+    margin-right: 80px
   }
+  
 
   .initials {
     border-radius: 50%;
@@ -34,6 +36,7 @@ export const PaymentSectionWrapper = styled.section`
     background: #7F8FA4;
     margin-right: 22px;
     color: #ffffff;
+    font-size: 18px;
   }
   
   .table_header > .col1 {
@@ -46,7 +49,7 @@ export const PaymentSectionWrapper = styled.section`
   }
 
   .list_item {
-    height: 70px;
+    height: 80px;
     background: #ffffff;
     border-bottom: 1px solid #CCCFD4;
   
@@ -92,8 +95,14 @@ export const PaymentSectionWrapper = styled.section`
   .pager {
     padding: 6px 10px !important;
     border: 1px solid #CED0DA;
-    border-radius: 4px;
-    background: transparent;
+    border-radius: 2px;
+    background: #F7F8FA important;
+    cursor: pointer;
+  }
+
+  .pager:hover {
+    color: white;
+    background: #1875F0;
   }
 
 `;
@@ -105,7 +114,7 @@ export const ListItem = styled.div`
     color: #7F8FA4;
   }
 
-  .col:5 {
+  .col5 {
     color: ${props => props.color};
   }
 
@@ -131,7 +140,7 @@ export const ListItem = styled.div`
 export const Pager = styled.li`
   background: ${props => props.isActive && '#1875F0'} !important;
   color: ${props => props.isActive && 'white'} !important;
-  margin: 0
+  margin: 0;
 `;
 
 export const SortSectionWrapper = styled.div`
@@ -142,7 +151,7 @@ export const SortSectionWrapper = styled.div`
   .search_payment {
     border-bottom: 0.5px solid #787878;
     font-size: 14px;
-    width: 400px;
+    width: 22%
     height: 35px
   }
 
@@ -175,12 +184,16 @@ export const SortSectionWrapper = styled.div`
     position: absolute;
     display: flex;
     justify-content: space-around;
-    left: 1000px;
+    left: 60%;
   }
 
   .aside > small {
     font-size: 16px;
     padding: 10px 15px
+  }
+
+  .aside select > option {
+    background: white;
   }
 
 `;
