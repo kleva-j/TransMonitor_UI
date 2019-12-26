@@ -3,7 +3,7 @@ import { ContainerWrapper } from '../styles/globalstyles';
 import { CenterContentWrapper } from '../styles';
 import { Sidebar } from './layout/Sidebar';
 import { TopSection } from './TopSection';
-import { PaymentSection } from './PaymentSection';
+import { PaymentSection } from './PaymentSection/PaymentSection';
 import { OverviewSection } from './OverviewSection';
 
 export const Container = () => {

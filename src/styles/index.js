@@ -13,15 +13,16 @@ export const Input = styled.input`
 `;
 
 export const HeaderStyle = styled.header`
+  position: fixed;
   background: #FFFFFF;
   box-shadow: 0px 4px 10px rgba(79, 79, 79, 0.07);
-  position: absolute;
-  width: 100vw;
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
   align-content: center;
   top: 0;
-  height: 70px
+  height: 70px;
+  z-index: 2;
 
   .logo {
     width: 300px;
@@ -88,6 +89,9 @@ export const HeaderStyle = styled.header`
 `;
 
 export const SidebarStyles = styled.section`
+  position: fixed;
+  left: 0;
+  top: 0;
   width: 300px;
   padding-top: 100px;
   background: #ffffff;
@@ -163,6 +167,7 @@ export const SidebarStyles = styled.section`
 `;
 
 export const CenterContentWrapper = styled.section`
+  margin-left: 300px
   display: flex;
   padding: 70px 50px 0 32px;
   flex-direction: column;
@@ -172,7 +177,7 @@ export const CenterContentWrapper = styled.section`
     justify-content: space-between;
   }
 
-  ul.flex li {
+  ul.flex > .flex {
     background: white;
     padding: 10px 15px 10px 15px;
     border-radius: 2px;
